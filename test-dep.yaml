@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: httpd-deployment
+    labels:
+      app: httpd2
+spec:
+ replicas: 3
+ selector:
+     matchLabels:
+      app: httpd2
+ template:
+     metadata:
+        labels:
+            app: httpd2
+     spec:
+       containers:
+         - name: httpd2
+           image: saidevops94/repos:latest
+           imagePullPolicy: "Always"
+           ports:
+           - containerPort: 80
