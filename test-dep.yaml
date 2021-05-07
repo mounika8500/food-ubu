@@ -4,19 +4,19 @@ kind: Deployment
 metadata:
     name: httpd-deployment
     labels:
-      app: httpd2
+      app: food-master
 spec:
  replicas: 3
  selector:
      matchLabels:
-      app: httpd2
+      app: food-master
  template:
      metadata:
         labels:
-            app: httpd2
+            app: food-master
      spec:
        containers:
-         - name: httpd2
+         - name: food-master
            image: saidevops94/repos:latest
            imagePullPolicy: "Always"
            ports:
