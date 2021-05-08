@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: httpd-deployment
+    name: food-master
     labels:
       app: food-master
 spec:
