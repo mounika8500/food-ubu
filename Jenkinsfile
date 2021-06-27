@@ -12,7 +12,7 @@ pipeline {
         stage ('Bulding docker docker image') {
             steps {
                 echo "build docker image"
-                sh 'docker build --no-cache -t test .'
+                sh 'docker build --no-cache -t test1 .'
                 sh 'docker tag test1:latest 156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest'
             }
         }
