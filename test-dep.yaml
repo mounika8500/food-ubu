@@ -18,7 +18,7 @@ spec:
      spec:
        containers:
          - name: food-master
-           image:156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest
+           image: docker push 156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest
            imagePullPolicy: "Always"
            ports:
            - containerPort: 80
