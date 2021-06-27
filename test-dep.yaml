@@ -5,19 +5,19 @@ metadata:
     name: httpd-deployment
     namespace: jaan
     labels:
-      app: food-master
+      app: httpd2
 spec:
  replicas: 3
  selector:
      matchLabels:
-      app: food-master
+      app: httpd2
  template:
      metadata:
         labels:
-            app: food-master
+            app: httpd2
      spec:
        containers:
-         - name: food-master
+         - name: httpd2
            image: docker push 156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest
            imagePullPolicy: "Always"
            ports:
