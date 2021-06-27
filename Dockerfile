@@ -1,8 +1,8 @@
-FROM ubuntu
+FROM centos
 
 #MAINTAINER sai@hcl.com
 
-RUN yum install apache/airflow -y
+RUN yum install httpd -y
 
 COPY food-master/* /var/www/html/food-master
 
