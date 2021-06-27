@@ -17,7 +17,7 @@ spec:
      spec:
        containers:
          - name: food-master
-           image: 195778983030.dkr.ecr.ap-south-1.amazonaws.com/test:latest
+           image:156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest
            imagePullPolicy: "Always"
            ports:
            - containerPort: 80
