@@ -27,9 +27,7 @@ pipeline {
            steps {
                 echo "deploying imges to EKS"
                 sh 'kubectl apply -f test-dep.yaml'
-                sh 'kubectl set image deployment/food-master food-master=156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest -n jaan'
                 sh 'kubectl apply -f test-svc.yaml'
-                sh 'kubectl rollout restart deployment/food-master'
                 sh 'docker rmi -f $(docker images --filter "dangling=true" -q --no-trunc)'
                
            }
