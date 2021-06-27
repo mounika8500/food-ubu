@@ -5,19 +5,19 @@ metadata:
     name: food-master
     namespace: jaan
     labels:
-      app: food-master
+      app: food
 spec:
  replicas: 3
  selector:
      matchLabels:
-      app: food-master
+      app: food
  template:
      metadata:
         labels:
-            app: food-master
+            app: food
      spec:
        containers:
-         - name: food-master
+         - name: food
            image: docker push 156739282338.dkr.ecr.ap-south-1.amazonaws.com/test1:latest
            imagePullPolicy: "Always"
            ports:
